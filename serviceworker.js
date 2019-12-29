@@ -1,5 +1,8 @@
+importScripts('/cache-polyfill.js');
 var CACHE_NAME = "ptu-cache-v1";
+// "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js"
 var CACHED_URLS = [
+  "/",
   "/index.html",
   "https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css",
   "https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js",
@@ -7,11 +10,13 @@ var CACHED_URLS = [
   "https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js",
   "/app/index.css",
   "/app/loading.css",
+  // "/app/opencv.js",
   "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js",
   "/app/index.js",
   "/favicon.ico",
   "/img/sunraise-icon-192.png",
-  "/img/sunraise-icon-512.png"
+  "/img/sunraise-icon-512.png",
+  "/manifest.json"
 ];
 
 self.addEventListener("install", function (event) {
@@ -22,27 +27,22 @@ self.addEventListener("install", function (event) {
   );
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener('fetch', function (event) {
+
+  console.log(event.request.url);
+
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+
+    caches.match(event.request).then(function (response) {
+
       return response || fetch(event.request);
+
     })
+
   );
+
 });
 
-// self.addEventListener("fetch", function(event) {
-//   event.respondWith(
-//     fetch(event.request).catch(function() {
-//       return caches.match(event.request).then(function(response) {
-//         if (response) {
-//           return response;
-//         } else if (event.request.headers.get("accept").includes("text/html")) {
-//           return caches.match("/index.html");
-//         }
-//       });
-//     })
-//   );
-// });
 // self.addEventListener("activate", function(event) {
 //   event.waitUntil(
 //     caches.keys().then(function(cacheNames) {
