@@ -1,4 +1,4 @@
-var CACHE_NAME = "ptu-cache";
+var CACHE_NAME = "ptu-cache-v1";
 var CACHED_URLS = [
   "/index.html",
   "https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css",
@@ -21,16 +21,38 @@ self.addEventListener("install", function (event) {
     })
   );
 });
+
 self.addEventListener("fetch", function(event) {
   event.respondWith(
-    fetch(event.request).catch(function() {
-      return caches.match(event.request).then(function(response) {
-        if (response) {
-          return response;
-        } else if (event.request.headers.get("accept").includes("text/html")) {
-          return caches.match("/index.html");
-        }
-      });
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
+
+// self.addEventListener("fetch", function(event) {
+//   event.respondWith(
+//     fetch(event.request).catch(function() {
+//       return caches.match(event.request).then(function(response) {
+//         if (response) {
+//           return response;
+//         } else if (event.request.headers.get("accept").includes("text/html")) {
+//           return caches.match("/index.html");
+//         }
+//       });
+//     })
+//   );
+// });
+self.addEventListener("activate", function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (CACHE_NAME !== cacheName && cacheName.startsWith("ptu-cache")) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
     })
   );
 });
