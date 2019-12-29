@@ -1,0 +1,22 @@
+{
+    "short_name": "P图",
+    "name": "P图小工具",
+    "description": "使用本工具可以方便地为您的图片添加滤镜，改变风格。",
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/img/sunraise-icon-192.png",
+        "type": "image/jpg",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/img/sunraise-icon-512.png",
+        "type": "image/jpg",
+        "sizes": "512x512"
+      }
+    ],
+    "theme_color": "#242424",
+    "background_color": "#242424"
+  }
