@@ -278,9 +278,11 @@ redoBtn.addEventListener('click', (e) => {
 let saveBtn = document.getElementById('save');
 saveBtn.addEventListener('click', (e) => {
     let canvas = document.getElementById('canvasHidden');
+    let newfileName = fileName.substring(0,fileName.lastIndexOf('.') )+".png";
+    console.log(newfileName);
     canvas.toBlob(function (blob) {
         let link = document.createElement('a');
-        link.download = fileName;
+        link.download = newfileName;
         link.href = URL.createObjectURL(blob);
         link.click();
     }, "image/png", 0.9);

@@ -1,5 +1,5 @@
 importScripts('/cache-polyfill.js');
-var CACHE_NAME = "ptu-cache-v1";
+var CACHE_NAME = "ptu-cache-v2";
 // "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js"
 var CACHED_URLS = [
   "/",
@@ -43,16 +43,16 @@ self.addEventListener('fetch', function (event) {
 
 });
 
-// self.addEventListener("activate", function(event) {
-//   event.waitUntil(
-//     caches.keys().then(function(cacheNames) {
-//       return Promise.all(
-//         cacheNames.map(function(cacheName) {
-//           if (CACHE_NAME !== cacheName && cacheName.startsWith("ptu-cache")) {
-//             return caches.delete(cacheName);
-//           }
-//         })
-//       );
-//     })
-//   );
-// });
+self.addEventListener("activate", function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (CACHE_NAME !== cacheName && cacheName.startsWith("ptu-cache")) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
