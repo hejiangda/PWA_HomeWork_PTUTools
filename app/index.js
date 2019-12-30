@@ -35,6 +35,8 @@ srcImg.onload = function () {
     dstMat = srcMat.clone();
     showMat = new cv.Mat();
     showResult();
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", "#317EFB");
 };
 // 撤销栈
 function pushImgStack() {
