@@ -8,14 +8,14 @@ var CACHED_URLS = [
   "https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js",
   "https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js",
   "https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js",
-  "/app/index.css",
-  "/app/loading.css",
-  "/app/opencv.js",
+  "/PWA_HomeWork_PTUTools/app/index.css",
+  "/PWA_HomeWork_PTUTools/app/loading.css",
+  "/PWA_HomeWork_PTUTools/app/opencv.js",
   // "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js",
-  "/app/index.js",
-  "/favicon.ico",
-  "/img/sunraise-icon-192.png",
-  "/img/sunraise-icon-512.png",
+  "/PWA_HomeWork_PTUTools/app/index.js",
+  "/PWA_HomeWork_PTUTools/favicon.ico",
+  "/PWA_HomeWork_PTUTools/img/sunraise-icon-192.png",
+  "/PWA_HomeWork_PTUTools/img/sunraise-icon-512.png",
   "/PWA_HomeWork_PTUTools/manifest.json"
 ];
 
