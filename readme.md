@@ -10,7 +10,7 @@
 
 ### 完成情况：
 
-+ 在线演示地址：https://ptu-1252338577.cos.ap-chengdu.myqcloud.com/index.html
++ 在线演示地址：https://hejiangda.github.io/PWA_HomeWork_PTUTools/
 
 + 动图演示：
 
