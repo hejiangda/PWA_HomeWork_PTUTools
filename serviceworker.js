@@ -10,13 +10,13 @@ var CACHED_URLS = [
   "https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js",
   "/app/index.css",
   "/app/loading.css",
-  // "/app/opencv.js",
-  "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js",
+  "/app/opencv.js",
+  // "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js",
   "/app/index.js",
   "/favicon.ico",
   "/img/sunraise-icon-192.png",
   "/img/sunraise-icon-512.png",
-  "/manifest.json"
+  "/PWA_HomeWork_PTUTools/manifest.json"
 ];
 
 self.addEventListener("install", function (event) {
