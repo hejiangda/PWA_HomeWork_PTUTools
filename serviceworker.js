@@ -1,4 +1,4 @@
-importScripts('/cache-polyfill.js');
+importScripts('/PWA_HomeWork_PTUTools/cache-polyfill.js');
 var CACHE_NAME = "ptu-cache-v2";
 // "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js"
 var CACHED_URLS = [
