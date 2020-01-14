@@ -2,8 +2,8 @@ importScripts('/PWA_HomeWork_PTUTools/cache-polyfill.js');
 var CACHE_NAME = "ptu-cache-v2";
 // "https://js-1252338577.cos.ap-chengdu.myqcloud.com/opencv.js"
 var CACHED_URLS = [
-  "/",
-  "/index.html",
+  "/PWA_HomeWork_PTUTools/",
+  "/PWA_HomeWork_PTUTools/index.html",
   "https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css",
   "https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js",
   "https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js",
