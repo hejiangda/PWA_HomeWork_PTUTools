@@ -7,12 +7,12 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/img/sunraise-icon-192.png",
+        "src": "/PWA_HomeWork_PTUTools/img/sunraise-icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/img/sunraise-icon-512.png",
+        "src": "/PWA_HomeWork_PTUTools/img/sunraise-icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
